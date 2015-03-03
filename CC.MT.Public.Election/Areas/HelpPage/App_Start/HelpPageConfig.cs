@@ -105,10 +105,7 @@ namespace CC.MT.Public.Election.Areas.HelpPage
       info69.Latitude = 43.576767m;
       info69.Longitude = -116.535189m;
 
-      PrecinctInfoList precinctList = new PrecinctInfoList();
-      precinctList.Add(info32);
-      precinctList.Add(info42);
-      precinctList.Add(info69);
+      PrecinctInfoList precinctList = new PrecinctInfoList() {info32, info42, info69};
 
       DistrictNames schca = new DistrictNames();
       schca.DistrictNo = "132";
@@ -122,9 +119,17 @@ namespace CC.MT.Public.Election.Areas.HelpPage
       leg13.DistrictName = "Legislative District 13";
       leg13.DistrictTypeName = "Legislative";
 
-      DistrictNamesList districtList = new DistrictNamesList();
-      districtList.Add(schca);
-      districtList.Add(leg13);
+      DistrictNamesList districtList = new DistrictNamesList() {schca, leg13};
+
+      ElectionDistrictPrecincts elpCald = new ElectionDistrictPrecincts();
+      elpCald.Name = "Caldwell School District";
+      elpCald.Precinct = "07,08,09,10,11,12,13,14,15,16,17,18,20,33,34,39";
+
+      ElectionDistrictPrecincts elpValli = new ElectionDistrictPrecincts();
+      elpValli.Name = "Vallivue School District";
+      elpValli.Precinct = "08,12,16,18,19,26,27,30,31,32,33,34,35,37,43,49,50,51,52,53,54,55";
+
+      ElectionDistrictPrecinctsList elpList = new ElectionDistrictPrecinctsList() {elpCald, elpValli};
 
       config.Services.Replace(typeof(IApiExplorer), new MyApiExplorer(config));
 
@@ -139,6 +144,7 @@ namespace CC.MT.Public.Election.Areas.HelpPage
           {typeof(string), "sample string"},
           {typeof(IQueryable<PrecinctInfo>), precinctList.AsQueryable()},
           {typeof(IQueryable<DistrictNames>), districtList.AsQueryable()},
+          {typeof(IQueryable<ElectionDistrictPrecincts>), elpList.AsQueryable()},
           //{typeof(IQueryable<string>), new string[]{"A", "B", "...", "W", "Y", "Z"}.AsQueryable()},
           //{typeof(Dictionary<string, string>), dict}
       });

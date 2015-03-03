@@ -1006,6 +1006,43 @@
             If set then there was an error in processing the request for data
             </summary>
         </member>
+        <member name="T:CC.MT.Public.Election.ElectionDistrictPrecinctsList">
+            <summary>
+            A List of <see cref="T:CC.MT.Public.Election.ElectionDistrictPrecincts"/>
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.ElectionDistrictPrecincts">
+            <summary>
+            Containing ElectionDistrictPrecincts Class
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.ElectionDistrictPrecincts.#ctor">
+            <summary>
+            Default Construtor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.ElectionDistrictPrecincts.#ctor(System.String)">
+            <summary>
+            Constructor that takes an error
+            </summary>
+            <param name="error">The error as to why we could not proceed</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictPrecincts.Name">
+            <summary>
+            The name of the district
+            </summary>
+            <see cref="T:CC.MT.Public.Election.DistrictNames"/>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictPrecincts.Precinct">
+            <summary>
+            The short precinct name separated by a comma
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictPrecincts.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
         <member name="T:CC.MT.Public.Election.PrecinctInfoList">
             <summary>
             A List of <see cref="T:CC.MT.Public.Election.PrecinctInfo"/>
@@ -1100,6 +1137,18 @@
             </summary>
             <returns>A List of District Information</returns>
             <see cref="T:CC.MT.Public.Election.DistrictNames"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.ElectionDistrictPrecinctsController">
+            <summary>
+            Returns a list of districts and/or zones that are in the current election with associated precincts
+            </summary>  
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.ElectionDistrictPrecinctsController.GetResultDetail">
+            <summary>
+            Get the Election District Precincts List
+            </summary>
+            <returns>A List of District and/or Zone for the current election as well as the precincts involved.</returns>
+            <see cref="T:CC.MT.Public.Election.ElectionDistrictPrecincts"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.HomeController">
             <summary>

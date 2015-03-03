@@ -21,7 +21,8 @@ namespace CC.MT.Public.Election.Controllers
       string path = String.Empty;
 
       //path = "/AllPrecinctInfo";
-      path = "/DistrictNames";
+      //path = "/DistrictNames";
+      path = "/ElectionDistrictPrecincts";
 
       Response.Redirect(Request.AppRelativeCurrentExecutionFilePath + path);
       return null;

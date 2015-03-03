@@ -197,9 +197,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Classes\DistrictNames.cs" />
+    <Compile Include="Classes\ElectionDistrictPrecincts.cs" />
     <Compile Include="Classes\PrecinctInfo.cs" />
     <Compile Include="Controllers\AllPrecintInfoController.cs" />
     <Compile Include="Controllers\DistrictNamesController.cs" />
+    <Compile Include="Controllers\ElectionDistrictPrecinctsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
