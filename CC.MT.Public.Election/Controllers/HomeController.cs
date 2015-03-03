@@ -20,7 +20,8 @@ namespace CC.MT.Public.Election.Controllers
 #if DEBUG
       string path = String.Empty;
 
-      path = "/AllPrecinctInfo";
+      //path = "/AllPrecinctInfo";
+      path = "/DistrictNames";
 
       Response.Redirect(Request.AppRelativeCurrentExecutionFilePath + path);
       return null;

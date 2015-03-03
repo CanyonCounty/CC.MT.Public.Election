@@ -72,46 +72,6 @@ namespace CC.MT.Public.Election.Areas.HelpPage
         Justification = "Part of a URI.")]
     public static void Register(HttpConfiguration config)
     {
-      //Inmate inmate = new Inmate("Only set on the first record if there was an error. It will be the error message.");
-      //inmate.FirstName = "JOHN";
-      //inmate.LastName = "PUBLIC";
-      //inmate.MiddleName = "QUE";
-      //inmate.IDNumber = "000000";
-
-      //Arrest arrest = new Arrest();
-      //arrest.ArrestDate = DateTime.Today.ToString();
-      //arrest.Agency = "Currently Always Blank";
-      //inmate.Arrests = new ArrestList();
-      //inmate.Arrests.Add(arrest);
-
-      //Charge charge1 = new Charge();
-      //charge1.StatuteCode = "I18-2407(2)";
-      //charge1.StatuteDesc = "Theft Petit";
-      //Charge charge2 = new Charge();
-      //charge2.StatuteCode = "I20-222";
-      //charge2.StatuteDesc = "Probation Violation [F]";
-
-      //inmate.Charges = new ChargeList();
-      //inmate.Charges.Add(charge1);
-      //inmate.Charges.Add(charge2);
-
-      //InmateList inmateList = new InmateList();
-      //inmateList.Add(inmate);
-
-      //Entities entity = new Entities();
-      //entity.CustomerWaitTime = "00:09:30";
-      //entity.ID = "2";
-      //entity.MaxCustomerWaitTime = "00:21:45";
-      //entity.Office = "Canyon County DMV ASSESSOR";
-      //EntitiesList entityList = new EntitiesList();
-      //entityList.Add(entity);
-
-      //Dictionary<string, string> dict = new Dictionary<string, string>();
-      //dict.Add("New Registration", "00:09:59");
-      //dict.Add("Out-of-State Registation", "00:10:28");
-      //dict.Add("...", "Several additional queues");
-      //dict.Add("Driver's Training Permit", "00:27:22");
-
       PrecinctInfo info32 = new PrecinctInfo();
       info32.DisplayAddress = "VALLIVUE LIONS CLUBHOUSE 15047 RIVERSIDE RD CORNER OF RIVERSIDE RD & HOADLEY RD CALDWELL, ID 83607";
       info32.Address = "15047 RIVERSIDE RD CALDWELL, ID 83607";
@@ -150,6 +110,22 @@ namespace CC.MT.Public.Election.Areas.HelpPage
       precinctList.Add(info42);
       precinctList.Add(info69);
 
+      DistrictNames schca = new DistrictNames();
+      schca.DistrictNo = "132";
+      schca.DistrictCode = "SCHCA";
+      schca.DistrictName = "Caldwell School District";
+      schca.DistrictTypeName = "School";
+
+      DistrictNames leg13 = new DistrictNames();
+      leg13.DistrictNo = "13";
+      leg13.DistrictCode = "LEG13";
+      leg13.DistrictName = "Legislative District 13";
+      leg13.DistrictTypeName = "Legislative";
+
+      DistrictNamesList districtList = new DistrictNamesList();
+      districtList.Add(schca);
+      districtList.Add(leg13);
+
       config.Services.Replace(typeof(IApiExplorer), new MyApiExplorer(config));
 
       //// Uncomment the following to use the documentation from XML documentation file.
@@ -162,9 +138,8 @@ namespace CC.MT.Public.Election.Areas.HelpPage
       {
           {typeof(string), "sample string"},
           {typeof(IQueryable<PrecinctInfo>), precinctList.AsQueryable()},
+          {typeof(IQueryable<DistrictNames>), districtList.AsQueryable()},
           //{typeof(IQueryable<string>), new string[]{"A", "B", "...", "W", "Y", "Z"}.AsQueryable()},
-          //{typeof(IQueryable<Inmate>), inmateList.AsQueryable()},
-          //{typeof(IQueryable<Entities>), entityList.AsQueryable()},
           //{typeof(Dictionary<string, string>), dict}
       });
 

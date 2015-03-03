@@ -960,6 +960,52 @@
             <param name="type">Type</param>
             <returns>string</returns>
         </member>
+        <member name="T:CC.MT.Public.Election.DistrictNamesList">
+            <summary>
+            A List of <see cref="T:CC.MT.Public.Election.DistrictNames"/>
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.DistrictNames">
+            <summary>
+            Containing DistrictNames Class
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.DistrictNames.#ctor">
+            <summary>
+            Default Construtor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.DistrictNames.#ctor(System.String)">
+            <summary>
+            Constructor that takes an error
+            </summary>
+            <param name="error">The error as to why we could not proceed</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictNo">
+            <summary>
+            The District Number
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictCode">
+            <summary>
+            The District Code (used for ballot type)
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictName">
+            <summary>
+            The name of the district
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictTypeName">
+            <summary>
+            The type of the district
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.DistrictNames.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
         <member name="T:CC.MT.Public.Election.PrecinctInfoList">
             <summary>
             A List of <see cref="T:CC.MT.Public.Election.PrecinctInfo"/>
@@ -1042,6 +1088,18 @@
             </summary>
             <returns>A List of Precinct Information</returns>
             <see cref="T:CC.MT.Public.Election.PrecinctInfo"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.DistrictNamesController">
+            <summary>
+            Returns all district name information
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.DistrictNamesController.GetDistrictNames">
+            <summary>
+            Get the District Names List
+            </summary>
+            <returns>A List of District Information</returns>
+            <see cref="T:CC.MT.Public.Election.DistrictNames"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.HomeController">
             <summary>

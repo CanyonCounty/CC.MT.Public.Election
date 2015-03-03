@@ -141,24 +141,5 @@ namespace CC.MT.Public.Election
       set { _error = value; }
     }
 
-    //public override string ToString()
-    //{
-    //  string ret = String.Empty;
-
-    //  ret += _pollingPlaceName;
-    //  if (_locationName != String.Empty)
-    //    ret += " " + _locationName;
-    //  if (_locationDesc != String.Empty)
-    //    ret += " " + _locationDesc;
-
-    //  ret += " " + _cityState;
-
-    //  //if (_precinctNo != String.Empty)
-    //  //  ret += "    Precinct: " + _precinctNo;
-
-    //  //ret = ret.ToLower();
-    //  //return CultureInfo.InvariantCulture.TextInfo.ToTitleCase(ret);
-    //  return ret;
-    //}
   }
 }
