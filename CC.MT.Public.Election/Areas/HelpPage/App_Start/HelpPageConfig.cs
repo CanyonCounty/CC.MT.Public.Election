@@ -91,6 +91,7 @@ namespace CC.MT.Public.Election.Areas.HelpPage
           {typeof(IQueryable<ElectionDistrictPrecincts>), ElectionDistrictPrecinctsListFactory.GetElectionDistrictPrecinctsListSample().AsQueryable()},
           {typeof(IQueryable<ElectionDistrictZone>), ElectionDistrictListFactory.GetElectionDistrictListSample().AsQueryable()},
           {typeof(IQueryable<PrecinctComplete>), PrecinctCompleteListFactory.GetPrecinctCompleteListSample().AsQueryable()},
+          {typeof(IQueryable<ResultDetail>), ResultDetailFactory.GetResultDetailSample().AsQueryable()},
           //{typeof(IQueryable<Party>), PartyListFactory.GetPartyListSample().AsQueryable()},
           {typeof(ElectionResultDetails), ElectionResultDetailsFactory.GetElectionResultDetailsSample()},
           {typeof(ElectionInfo), ElectionInfoFactory.GetElectionInfoSample()},

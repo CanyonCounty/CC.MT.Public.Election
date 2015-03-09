@@ -624,6 +624,17 @@
             </summary>
             <returns>Dummy ElectionResultDetails data</returns>
         </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ResultDetailFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ResultDetailFactory.GetResultDetailSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy ResultDetailList data</returns>
+        </member>
         <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ResultSummaryFactory">
             <summary>
             This creates the sample data for documentation
@@ -1496,6 +1507,63 @@
             If set then there was an error in processing the request for data
             </summary>
         </member>
+        <member name="T:CC.MT.Public.Election.Classes.ResultDetailList">
+            <summary>
+            A list of Result Detail
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.ResultDetail"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.ResultDetail">
+            <summary>
+            A Line item per choice
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ResultDetail.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ResultDetail.#ctor(System.String)">
+            <summary>
+            Error Handler constructor
+            </summary>
+            <param name="error">The error as to why we could not proceed</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.ElectionID">
+            <summary>
+            You Can't see me
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.Party">
+            <summary>
+            Can be any party name or empty if there is no party affiliation for the contests
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.Contest">
+            <summary>
+            The Name of the contest as it appears on the ballot
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.Choice">
+            <summary>
+            The Choice Name as it is on the ballot
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.Votecount">
+            <summary>
+            The current vote count for the choice. It will be blank before ballots are counted
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.Percentage">
+            <summary>
+            The calculated percentage of vote counts between choices. It will be blank before ballots are counted
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultDetail.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
         <member name="T:CC.MT.Public.Election.Classes.ResultSummary">
             <summary>
             The Election Summary
@@ -1626,6 +1694,18 @@
             </summary>
             <returns>A List of Election ResultDetails</returns>
             <see cref="T:CC.MT.Public.Election.Classes.ElectionResultDetails"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.ElectionResultDetailsFlatController">
+            <summary>
+            The Result Details in a single row per choice. Parsing isn't fun some times
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.ElectionResultDetailsFlatController.GetResultDetail">
+            <summary>
+            The Result Details in a single row per choice
+            </summary>
+            <returns>A List of ResultDetail</returns>
+            <see cref="T:CC.MT.Public.Election.Classes.ResultDetail"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.ElectionResultSummaryController">
             <summary>

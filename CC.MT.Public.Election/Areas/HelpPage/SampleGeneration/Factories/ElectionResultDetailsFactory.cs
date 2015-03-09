@@ -13,8 +13,8 @@ namespace CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories
     /// <returns>Dummy ElectionResultDetails data</returns>
     public static ElectionResultDetails GetElectionResultDetailsSample()
     {
-      Choice mickey = new Choice {Name = "Mickey Duck", Percentage = "30", VoteCount = "3"};
-      Choice donald = new Choice { Name = "Donald Mouse", Percentage = "70", VoteCount = "7" };
+      Choice mickey = new Choice {Name = "MICKEY DUCK", Percentage = "30", VoteCount = "3"};
+      Choice donald = new Choice { Name = "DONALD MOUSE", Percentage = "70", VoteCount = "7" };
 
       Contest senator = new Contest {Name = "UNITED STATES SENATOR"};
       senator.Choices.Add(mickey);
@@ -23,8 +23,8 @@ namespace CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories
       Party repub = new Party {PartyName = "REPUBLICAN PARTY"};
       repub.Contests.Add(senator);
 
-      Choice bugs = new Choice() { Name = "Bugs Duck", Percentage = "70", VoteCount = "7" };
-      Choice daffy = new Choice() { Name = "Daffy Bunny", Percentage = "30", VoteCount = "3" };
+      Choice bugs = new Choice() { Name = "BUGS DUCK", Percentage = "70", VoteCount = "7" };
+      Choice daffy = new Choice() { Name = "DAFFY BUNNY", Percentage = "30", VoteCount = "3" };
 
       Contest rep = new Contest() { Name = "REPRESENTATIVE IN CONGRESS DISTRICT 1" };
       rep.Choices.Add(bugs);

@@ -193,6 +193,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\Factories\ElectionDistrictPrecinctsListFactory.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\Factories\ElectionInfoFactory.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\Factories\ElectionResultDetailsFactory.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\Factories\ResultDetailFactory.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\Factories\ResultSummaryFactory.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\Factories\PartyListFactory.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\Factories\PrecinctCompleteListFactory.cs" />
@@ -215,12 +216,14 @@
     <Compile Include="Classes\Party.cs" />
     <Compile Include="Classes\PrecinctComplete.cs" />
     <Compile Include="Classes\PrecinctInfo.cs" />
+    <Compile Include="Classes\ResultDetail.cs" />
     <Compile Include="Classes\ResultSummary.cs" />
     <Compile Include="Controllers\AllPrecintInfoController.cs" />
     <Compile Include="Controllers\DistrictNamesController.cs" />
     <Compile Include="Controllers\ElectionDistrictPrecinctsController.cs" />
     <Compile Include="Controllers\ElectionDistrictZonesController.cs" />
     <Compile Include="Controllers\ElectionResultDetailsController.cs" />
+    <Compile Include="Controllers\ElectionResultDetailsFlatController.cs" />
     <Compile Include="Controllers\ElectionResultSummaryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NextElectionController.cs" />
