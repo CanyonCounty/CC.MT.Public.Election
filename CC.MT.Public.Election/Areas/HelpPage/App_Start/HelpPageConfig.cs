@@ -94,6 +94,7 @@ namespace CC.MT.Public.Election.Areas.HelpPage
           //{typeof(IQueryable<Party>), PartyListFactory.GetPartyListSample().AsQueryable()},
           {typeof(ElectionResultDetails), ElectionResultDetailsFactory.GetElectionResultDetailsSample()},
           {typeof(ElectionInfo), ElectionInfoFactory.GetElectionInfoSample()},
+          {typeof(ResultSummary), ResultSummaryFactory.GetResultSummarySample()},
           //{typeof(IQueryable<string>), new string[]{"A", "B", "...", "W", "Y", "Z"}.AsQueryable()},
           //{typeof(Dictionary<string, string>), dict}
       });

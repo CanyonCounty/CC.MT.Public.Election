@@ -624,6 +624,17 @@
             </summary>
             <returns>Dummy ElectionResultDetails data</returns>
         </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ResultSummaryFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ResultSummaryFactory.GetResultSummarySample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy ResultSummary data</returns>
+        </member>
         <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PartyListFactory">
             <summary>
             This creates the sample data for documentation
@@ -1485,6 +1496,77 @@
             If set then there was an error in processing the request for data
             </summary>
         </member>
+        <member name="T:CC.MT.Public.Election.Classes.ResultSummary">
+            <summary>
+            The Election Summary
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ResultSummary.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ResultSummary.#ctor(System.String)">
+            <summary>
+            Error Handler constructor
+            </summary>
+            <param name="error">The error as to why we could not proceed</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.ResultSummaryID">
+            <summary>
+            You Can't see me
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.ElectionID">
+            <summary>
+            You Can't see me
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.LastUpdated">
+            <summary>
+            The Date and Time the Summary was last updated. It could be blank.
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.TotalVoters">
+            <summary>
+            The total number of voters that can vote in this election. It could be blank, unknown at the current time.
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.BallotsCounted">
+            <summary>
+            The total number of ballots that have been counted.
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.VoterTurnout">
+            <summary>
+            The voter turnout percentage. It could be blank.
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.PrecinctsComplete">
+            <summary>
+            The number of precincts that have been counted, in the format (0 out of 64)
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.ElectionName">
+            <summary>
+            The current election name
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.ElectionDate">
+            <summary>
+            The current election date
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.ResultTime">
+            <summary>
+            The Date Time the results should start being visible
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ResultSummary.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
         <member name="T:CC.MT.Public.Election.Controllers.AllPrecinctInfoController">
             <summary>
             Returns all precinct information.
@@ -1544,6 +1626,18 @@
             </summary>
             <returns>A List of Election ResultDetails</returns>
             <see cref="T:CC.MT.Public.Election.Classes.ElectionResultDetails"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.ElectionResultSummaryController">
+            <summary>
+            Returns the Current Election Summary
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.ElectionResultSummaryController.GetResultSummary">
+            <summary>
+            Returns the Current Election Summary
+            </summary>
+            <returns>ResultSummary</returns>
+            <see cref="T:CC.MT.Public.Election.Classes.ResultSummary"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.HomeController">
             <summary>
