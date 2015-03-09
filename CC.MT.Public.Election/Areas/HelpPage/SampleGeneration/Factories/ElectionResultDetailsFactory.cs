@@ -3,7 +3,7 @@
 namespace CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories
 {
   /// <summary>
-  /// 
+  /// This creates the sample data for documentation
   /// </summary>
   public static class ElectionResultDetailsFactory
   {

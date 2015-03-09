@@ -14,16 +14,6 @@ namespace CC.MT.Public.Election.Classes
   /// </summary>
   public class ElectionDistrictZone
   {
-    private string _number;
-    private string _code;
-    private string _name;
-    private string _precinctNo;
-    private string _precinct;
-    private string _precinctID;
-    private string _districtTypeName;
-    private string _label;
-    private string _error;
-
     /// <summary>
     /// Default Construtor
     /// </summary>
@@ -35,97 +25,61 @@ namespace CC.MT.Public.Election.Classes
     /// <param name="error">The error as to why we could not proceed</param>
     public ElectionDistrictZone(string error)
     {
-      _number = String.Empty;
-      _code = String.Empty;
-      _name = String.Empty;
-      _precinctNo = String.Empty;
-      _precinct = String.Empty;
-      _precinctID = String.Empty;
-      _districtTypeName = String.Empty;
-      _label = String.Empty;
-      _error = error;
+      Number = String.Empty;
+      Code = String.Empty;
+      Name = String.Empty;
+      PrecinctNo = String.Empty;
+      Precinct = String.Empty;
+      PrecinctID = String.Empty;
+      DistrictTypeName = String.Empty;
+      Label = String.Empty;
+      Error = error;
     }
 
     /// <summary>
     /// The District and/or Zone number
     /// </summary>
-    public String Number
-    {
-      get { return _number; }
-      set { _number = value; }
-    }
+    public String Number { get; set; }
 
     /// <summary>
     /// The District and/or Zone Code (used for ballot type)
     /// </summary>
-    public String Code
-    {
-      get { return _code; }
-      set { _code = value; }
-    }
+    public String Code { get; set; }
 
     /// <summary>
     /// The District and/or Zone name
     /// </summary>
-    public String Name
-    {
-      get { return _name; }
-      set { _name = value; }
-    }
+    public String Name { get; set; }
 
     /// <summary>
     /// The full precinct number 'precinct-district' (ie. 69-13)
     /// </summary>
-    public String PrecinctNo
-    {
-      get { return _precinctNo; }
-      set { _precinctNo = value; }
-    }
+    public String PrecinctNo { get; set; }
 
     /// <summary>
     /// The short precinct number 'precinct' (ie. 69) zero padded
     /// </summary>
-    public String Precinct
-    {
-      get { return _precinct; }
-      set { _precinct = value; }
-    }
+    public String Precinct { get; set; }
 
     /// <summary>
     /// The precinct ID
     /// </summary>
     [IgnoreDataMember]
-    public String PrecinctID
-    {
-      get { return _precinctID; }
-      set { _precinctID = value; }
-    }
+    public String PrecinctID { get; set; }
 
     /// <summary>
     /// The type of the district
     /// </summary>
-    public String DistrictTypeName
-    {
-      get { return _districtTypeName; }
-      set { _districtTypeName = value; }
-    }
+    public String DistrictTypeName { get; set; }
 
     /// <summary>
     /// Specifies District or Zone
     /// </summary>
-    public String Label
-    {
-      get { return _label; }
-      set { _label = value; }
-    }
+    public String Label { get; set; }
 
     /// <summary>
     /// If set then there was an error in processing the request for data
     /// </summary>
-    public String Error
-    {
-      get { return _error; }
-      set { _error = value; }
-    }
+    public String Error { get; set; }
   }
 }

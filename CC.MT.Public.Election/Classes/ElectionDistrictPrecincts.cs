@@ -13,10 +13,6 @@ namespace CC.MT.Public.Election.Classes
   /// </summary>
   public class ElectionDistrictPrecincts
   {
-    private string _district;
-    private string _precinct;
-    private string _error;
-
     /// <summary>
     /// Default Construtor
     /// </summary>
@@ -28,38 +24,25 @@ namespace CC.MT.Public.Election.Classes
     /// <param name="error">The error as to why we could not proceed</param>
     public ElectionDistrictPrecincts(string error)
     {
-      _district = String.Empty;
-      _precinct = String.Empty;
-      _error = error;
+      Name = String.Empty;
+      Precinct = String.Empty;
+      Error = error;
     }
 
     /// <summary>
     /// The name of the district
     /// </summary>
     /// <see cref="DistrictNames"/>
-    public string Name
-    {
-      get { return _district; }
-      set { _district = value; }
-    }
+    public string Name { get; set; }
 
     /// <summary>
     /// The short precinct name separated by a comma
     /// </summary>
-    public string Precinct
-    {
-      get { return _precinct; }
-      set { _precinct = value; }
-    }
-    
+    public string Precinct { get; set; }
+
     /// <summary>
     /// If set then there was an error in processing the request for data
     /// </summary>
-    public string Error
-    {
-      get { return _error; }
-      set { _error = value; }
-    }
-
+    public string Error { get; set; }
   }
 }

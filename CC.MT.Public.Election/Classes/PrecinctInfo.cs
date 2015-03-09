@@ -13,17 +13,6 @@ namespace CC.MT.Public.Election.Classes
   /// </summary>
   public class PrecinctInfo
   {
-    private string _displayAddress;
-    private string _address;
-    private string _pollingPlaceName;
-    private string _locationName;
-    private string _locationDesc;
-    private string _cityState;
-    private string _precinctNo;
-    private decimal _latitude;
-    private decimal _longitude;
-    private string _error;
-
     /// <summary>
     /// Default Construtor
     /// </summary>
@@ -35,106 +24,65 @@ namespace CC.MT.Public.Election.Classes
     /// <param name="error">The error as to why we could not proceed</param>
     public PrecinctInfo(string error)
     {
-      _pollingPlaceName = String.Empty;
-      _locationName = String.Empty;
-      _locationDesc = String.Empty;
-      _cityState = String.Empty;
-      _precinctNo = String.Empty;
-      _latitude = 0.0m;
-      _longitude = 0.0m;
-      _error = error;
+      PollingPlaceName = String.Empty;
+      LocationName = String.Empty;
+      LocationDesc = String.Empty;
+      CityStateZip = String.Empty;
+      PrecinctNo = String.Empty;
+      Latitude = 0.0m;
+      Longitude = 0.0m;
+      Error = error;
     }
 
     /// <summary>
     /// The PollingPlaceName and Address
     /// </summary>
-    public string DisplayAddress
-    {
-      //get { return _locationName + " " + _cityState; }
-      get { return _displayAddress; }
-      set { _displayAddress = value; }
-    }
+    public string DisplayAddress { //get { return _locationName + " " + _cityState; }
+      get; set; }
 
     /// <summary>
     /// The full address
     /// </summary>
-    public string Address
-    {
-      get { return _address; }
-      set { _address = value; }
-    }
+    public string Address { get; set; }
 
     /// <summary>
     /// The name of the polling place
     /// </summary>
-    public string PollingPlaceName
-    {
-      get { return _pollingPlaceName; }
-      set { _pollingPlaceName = value; }
-    }
+    public string PollingPlaceName { get; set; }
 
     /// <summary>
     /// The street number and name
     /// </summary>
-    public string LocationName
-    {
-      get { return _locationName; }
-      set { _locationName = value; }
-    }
+    public string LocationName { get; set; }
 
     /// <summary>
     /// Any additional information - (ie. clubhouse, north ballroom). Can be empty
     /// </summary>
-    public string LocationDesc
-    {
-      get { return _locationDesc; }
-      set { _locationDesc = value; }
-    }
+    public string LocationDesc { get; set; }
 
     /// <summary>
     /// The City, State and Zip
     /// </summary>
-    public string CityStateZip
-    {
-      get { return _cityState; }
-      set { _cityState = value; }
-    }
+    public string CityStateZip { get; set; }
 
     /// <summary>
     /// The full precinct number 'precinct-district' (ie. 69-13)
     /// </summary>
-    public string PrecinctNo
-    {
-      get { return _precinctNo; }
-      set { _precinctNo = value; }
-    }
+    public string PrecinctNo { get; set; }
 
     /// <summary>
     /// The Latitude of the precinct location
     /// </summary>
-    public decimal Latitude
-    {
-      get { return _latitude; }
-      set { _latitude = value; }
-    }
+    public decimal Latitude { get; set; }
 
     /// <summary>
     /// The Longitude of the precinct location
     /// </summary>
-    public decimal Longitude
-    {
-      get { return _longitude; }
-      set { _longitude = value; }
-    }
+    public decimal Longitude { get; set; }
 
     /// <summary>
     /// If set then there was an error in processing the request for data
     /// </summary>
-    public string Error
-    {
-      get { return _error; }
-      set { _error = value; }
-    }
-
+    public string Error { get; set; }
   }
 }

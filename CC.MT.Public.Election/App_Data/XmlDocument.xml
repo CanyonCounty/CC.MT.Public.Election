@@ -602,9 +602,20 @@
             </summary>
             <returns>Dummy ElectionDistrictPrecinctsList data</returns>
         </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionInfoFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionInfoFactory.GetElectionInfoSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy ElectionInfo data</returns>
+        </member>
         <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionResultDetailsFactory">
             <summary>
-            
+            This creates the sample data for documentation
             </summary>
         </member>
         <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionResultDetailsFactory.GetElectionResultDetailsSample">
@@ -612,6 +623,28 @@
             This just returns some dummy data for the help pages
             </summary>
             <returns>Dummy ElectionResultDetails data</returns>
+        </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PartyListFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PartyListFactory.GetPartyListSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy PartyList data</returns>
+        </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PrecinctCompleteListFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PrecinctCompleteListFactory.GetPrecinctCompleteListSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy PrecinctCompleteList data</returns>
         </member>
         <member name="T:CC.MT.Public.Election.Areas.HelpPage.HelpPageSampleGenerator">
             <summary>
@@ -1229,11 +1262,57 @@
             If set then there was an error in processing the request for data
             </summary>
         </member>
+        <member name="T:CC.MT.Public.Election.Classes.ElectionInfo">
+            <summary>
+            Election Information
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ElectionInfo.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ElectionInfo.#ctor(System.String)">
+            <summary>
+            Error Constructor
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionInfo.ElectionID">
+            <summary>
+            Election ID, now visible
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionInfo.ElectionDate">
+            <summary>
+            The Date of the Election
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionInfo.ElectionCountdown">
+            <summary>
+            The number of days until the election. Can also be "Tomorrow" or "Today"
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionInfo.ElectionName">
+            <summary>
+            The Name of the election
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionInfo.ElectionTypeName">
+            <summary>
+            The Type of Election
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionInfo.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
         <member name="T:CC.MT.Public.Election.Classes.ElectionResultDetails">
             <summary>
             Returns the collection of ElectionResultDetails
             </summary>
-            <see cref="T:CC.MT.Public.Election.Classes.PartyList"/>
+            <see cref="T:CC.MT.Public.Election.Classes.ElectionResultDetails"/>
         </member>
         <member name="M:CC.MT.Public.Election.Classes.ElectionResultDetails.#ctor">
             <summary>
@@ -1255,9 +1334,10 @@
         </member>
         <member name="P:CC.MT.Public.Election.Classes.ElectionResultDetails.Results">
             <summary>
-            A <see cref="T:CC.MT.Public.Election.Classes.PartyList">PartyList</see> of Results
+            A PartyList of Results
             </summary>
             <see cref="T:CC.MT.Public.Election.Classes.PartyList"/>
+            <seealso cref="T:CC.MT.Public.Election.Classes.PartyList"/>
         </member>
         <member name="P:CC.MT.Public.Election.Classes.ElectionResultDetails.Error">
             <summary>
@@ -1296,6 +1376,43 @@
             A List of contests for the party affiliation
             </summary>
             <see cref="T:CC.MT.Public.Election.Classes.ContestList"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.PrecinctCompleteList">
+            <summary>
+            A List of PrecinctComplete
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.PrecinctComplete"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.PrecinctComplete">
+            <summary>
+            Information regarding if a precinct has been counted yet
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.PrecinctComplete.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.PrecinctComplete.#ctor(System.String)">
+            <summary>
+            Error handler constructor
+            </summary>
+            <param name="error">The error that occurred</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctComplete.Precinct">
+            <summary>
+            The precinct number in simple form (without the district)
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctComplete.Completed">
+            <summary>
+            Either true if complete or false if incomplete
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctComplete.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
         </member>
         <member name="T:CC.MT.Public.Election.Classes.PrecinctInfoList">
             <summary>
@@ -1438,6 +1555,30 @@
             Index Action
             </summary>
             <returns>A Page or null and a Redirect</returns>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.NextElectionController">
+            <summary>
+            Returns information for the next election
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.NextElectionController.GetNextElection">
+            <summary>
+            Returns information for the next election
+            </summary>
+            <returns>ElectionInfo for the next election</returns>
+            <see cref="T:CC.MT.Public.Election.Classes.ElectionInfo"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.PrecinctCompleteController">
+            <summary>
+            Returns a list of precincts for the current election. It also specifies if counting has been completed
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.PrecinctCompleteController.GetPrecinctComplete">
+            <summary>
+            Returns a list of precincts for the current election. It also specifies if counting has been completed
+            </summary>
+            <returns>PrecinctComplete</returns>
+            <see cref="T:CC.MT.Public.Election.Classes.PrecinctComplete"/>
         </member>
         <member name="T:CC.MT.Public.Election.WebApiApplication">
             <summary>
