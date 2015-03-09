@@ -15,6 +15,9 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
+using CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories;
+using CC.MT.Public.Election.Classes;
+
 #if Handle_PageResultOfT
 using System.Web.Http.OData;
 #endif
@@ -72,85 +75,6 @@ namespace CC.MT.Public.Election.Areas.HelpPage
         Justification = "Part of a URI.")]
     public static void Register(HttpConfiguration config)
     {
-      PrecinctInfo info32 = new PrecinctInfo();
-      info32.DisplayAddress = "VALLIVUE LIONS CLUBHOUSE 15047 RIVERSIDE RD CORNER OF RIVERSIDE RD & HOADLEY RD CALDWELL, ID 83607";
-      info32.Address = "15047 RIVERSIDE RD CALDWELL, ID 83607";
-      info32.PollingPlaceName = "VALLIVUE LIONS CLUBHOUSE";
-      info32.LocationName = "15047 RIVERSIDE RD";
-      info32.LocationDesc = "CORNER OF RIVERSIDE RD & HOADLEY RD";
-      info32.CityStateZip = "CALDWELL, ID 8360";
-      info32.PrecinctNo = "32-11";
-      info32.Latitude = 43.588787m;
-      info32.Longitude = -116.728875m;
-
-      PrecinctInfo info42 = new PrecinctInfo();
-      info42.DisplayAddress = "LDS CHURCH 22500 LANSING LANE MIDDLETON, ID 83644";
-      info42.Address = "22500 LANSING LANE MIDDLETON, ID 83644";
-      info42.PollingPlaceName = "LDS CHURCH";
-      info42.LocationName = "22500 LANSING LANE";
-      info42.LocationDesc = "";
-      info42.CityStateZip = "MIDDLETON, ID 83644";
-      info42.PrecinctNo = "42-11";
-      info42.Latitude = 43.699215m;
-      info42.Longitude = -116.572299m;
-
-      PrecinctInfo info69 = new PrecinctInfo();
-      info69.DisplayAddress = "ENDEAVOR ELEMENTARY SCHOOL 2824 E VICTORY RD NAMPA, ID 83687";
-      info69.Address = "2824 E VICTORY RD NAMPA, ID 83687";
-      info69.PollingPlaceName = "ENDEAVOR ELEMENTARY SCHOOL";
-      info69.LocationName = "2824 E VICTORY RD";
-      info69.LocationDesc = "";
-      info69.CityStateZip = "NAMPA, ID 83687";
-      info69.PrecinctNo = "69-13";
-      info69.Latitude = 43.576767m;
-      info69.Longitude = -116.535189m;
-
-      PrecinctInfoList precinctList = new PrecinctInfoList() {info32, info42, info69};
-
-      DistrictNames schca = new DistrictNames();
-      schca.DistrictNo = "132";
-      schca.DistrictCode = "SCHCA";
-      schca.DistrictName = "Caldwell School District";
-      schca.DistrictTypeName = "School";
-
-      DistrictNames leg13 = new DistrictNames();
-      leg13.DistrictNo = "13";
-      leg13.DistrictCode = "LEG13";
-      leg13.DistrictName = "Legislative District 13";
-      leg13.DistrictTypeName = "Legislative";
-
-      DistrictNamesList districtList = new DistrictNamesList() {schca, leg13};
-
-      ElectionDistrictPrecincts elpCald = new ElectionDistrictPrecincts();
-      elpCald.Name = "Caldwell School District";
-      elpCald.Precinct = "07,08,09,10,11,12,13,14,15,16,17,18,20,33,34,39";
-
-      ElectionDistrictPrecincts elpValli = new ElectionDistrictPrecincts();
-      elpValli.Name = "Vallivue School District";
-      elpValli.Precinct = "08,12,16,18,19,26,27,30,31,32,33,34,35,37,43,49,50,51,52,53,54,55";
-
-      ElectionDistrictPrecinctsList elpList = new ElectionDistrictPrecinctsList() {elpCald, elpValli};
-
-      ElectionDistrictZone edCald = new ElectionDistrictZone();
-      edCald.Number = "132";
-      edCald.Code = "SCHCA";
-      edCald.Name = "Caldwell School District";
-      edCald.PrecinctNo = "07-10";
-      edCald.Precinct = "07";
-      edCald.DistrictTypeName = "School";
-      edCald.Label = "District";
-
-      ElectionDistrictZone edMid = new ElectionDistrictZone();
-      edMid.Number = "134-2";
-      edMid.Code = "SCHMDZ2";
-      edMid.Name = "Middleton School District Zone 2";
-      edMid.PrecinctNo = "40-11";
-      edMid.Precinct = "40";
-      edMid.DistrictTypeName = "School";
-      edMid.Label = "Zone";
-
-      ElectionDistrictList eldList = new ElectionDistrictList() {edCald, edMid};
-
       config.Services.Replace(typeof(IApiExplorer), new MyApiExplorer(config));
 
       //// Uncomment the following to use the documentation from XML documentation file.
@@ -162,10 +86,11 @@ namespace CC.MT.Public.Election.Areas.HelpPage
       config.SetSampleObjects(new Dictionary<Type, object>
       {
           {typeof(string), "sample string"},
-          {typeof(IQueryable<PrecinctInfo>), precinctList.AsQueryable()},
-          {typeof(IQueryable<DistrictNames>), districtList.AsQueryable()},
-          {typeof(IQueryable<ElectionDistrictPrecincts>), elpList.AsQueryable()},
-          {typeof(IQueryable<ElectionDistrictZone>), eldList.AsQueryable()},
+          {typeof(IQueryable<PrecinctInfo>), PrecinctInfoListFactory.GetPrecinctInfoListSample().AsQueryable()},
+          {typeof(IQueryable<DistrictNames>), DistrictNamesListFactory.GetDistrictNamesListSample().AsQueryable()},
+          {typeof(IQueryable<ElectionDistrictPrecincts>), ElectionDistrictPrecinctsListFactory.GetElectionDistrictPrecinctsListSample().AsQueryable()},
+          {typeof(IQueryable<ElectionDistrictZone>), ElectionDistrictListFactory.GetElectionDistrictListSample().AsQueryable()},
+          {typeof(ElectionResultDetails), ElectionResultDetailsFactory.GetElectionResultDetailsSample()},
           //{typeof(IQueryable<string>), new string[]{"A", "B", "...", "W", "Y", "Z"}.AsQueryable()},
           //{typeof(Dictionary<string, string>), dict}
       });

@@ -569,6 +569,50 @@
             Gets the error messages associated with this model.
             </summary>
         </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.DistrictNamesListFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.DistrictNamesListFactory.GetDistrictNamesListSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy DistrictNamesList data</returns>
+        </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionDistrictListFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionDistrictListFactory.GetElectionDistrictListSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy ElectionDistrictList data</returns>
+        </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionDistrictPrecinctsListFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionDistrictPrecinctsListFactory.GetElectionDistrictPrecinctsListSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy ElectionDistrictPrecinctsList data</returns>
+        </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionResultDetailsFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.ElectionResultDetailsFactory.GetElectionResultDetailsSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy ElectionResultDetails data</returns>
+        </member>
         <member name="T:CC.MT.Public.Election.Areas.HelpPage.HelpPageSampleGenerator">
             <summary>
             This class will generate the samples for the help page.
@@ -857,6 +901,17 @@
             <param name="type">The type.</param>
             <returns>An object of the given type.</returns>
         </member>
+        <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PrecinctInfoListFactory">
+            <summary>
+            This creates the sample data for documentation
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Areas.HelpPage.SampleGeneration.Factories.PrecinctInfoListFactory.GetPrecinctInfoListSample">
+            <summary>
+            This just returns some dummy data for the help pages
+            </summary>
+            <returns>Dummy PrecinctInfoList data</returns>
+        </member>
         <member name="T:CC.MT.Public.Election.Areas.HelpPage.SampleDirection">
             <summary>
             Indicates whether the sample is used for request or response
@@ -960,222 +1015,355 @@
             <param name="type">Type</param>
             <returns>string</returns>
         </member>
-        <member name="T:CC.MT.Public.Election.DistrictNamesList">
+        <member name="T:CC.MT.Public.Election.Classes.ChoiceList">
             <summary>
-            A List of <see cref="T:CC.MT.Public.Election.DistrictNames"/>
+            A List of Choices
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.DistrictNames">
+        <member name="T:CC.MT.Public.Election.Classes.Choice">
+            <summary>
+            A Single Choice
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.Choice.ToString">
+            <summary>
+            Just a prettier string than default
+            </summary>
+            <returns>Choice Name + " - " + VoteCount + " - " + Percentage</returns>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Choice.Name">
+            <summary>
+            The Choice Name as it is on the ballot
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Choice.VoteCount">
+            <summary>
+            The current vote count for the choice. It will be blank before ballots are counted
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Choice.Percentage">
+            <summary>
+            The calculated percentage of vote counts between choices. It will be blank before ballots are counted
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.ContestList">
+            <summary>
+            A List of Contests
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.Contest"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.Contest">
+            <summary>
+            A Contest
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.ChoiceList"/>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.Contest.#ctor">
+            <summary>
+            Another Constructor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.Contest.ToString">
+            <summary>
+            Just a prettier string than default
+            </summary>
+            <returns>Contest Name + Choices Count</returns>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Contest.Name">
+            <summary>
+            The Name of the contest as it appears on the ballot
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Contest.Choices">
+            <summary>
+            A list of choices that appear on the ballot
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.ChoiceList"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.DistrictNamesList">
+            <summary>
+            A List of <see cref="T:CC.MT.Public.Election.Classes.DistrictNames"/>
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.DistrictNames">
             <summary>
             Containing DistrictNames Class
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.DistrictNames.#ctor">
+        <member name="M:CC.MT.Public.Election.Classes.DistrictNames.#ctor">
             <summary>
             Default Construtor
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.DistrictNames.#ctor(System.String)">
+        <member name="M:CC.MT.Public.Election.Classes.DistrictNames.#ctor(System.String)">
             <summary>
             Constructor that takes an error
             </summary>
             <param name="error">The error as to why we could not proceed</param>
         </member>
-        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictNo">
+        <member name="P:CC.MT.Public.Election.Classes.DistrictNames.DistrictNo">
             <summary>
             The District Number
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictCode">
+        <member name="P:CC.MT.Public.Election.Classes.DistrictNames.DistrictCode">
             <summary>
             The District Code (used for ballot type)
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictName">
+        <member name="P:CC.MT.Public.Election.Classes.DistrictNames.DistrictName">
             <summary>
             The name of the district
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.DistrictNames.DistrictTypeName">
+        <member name="P:CC.MT.Public.Election.Classes.DistrictNames.DistrictTypeName">
             <summary>
             The type of the district
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.DistrictNames.Error">
+        <member name="P:CC.MT.Public.Election.Classes.DistrictNames.Error">
             <summary>
             If set then there was an error in processing the request for data
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.ElectionDistrictList">
+        <member name="T:CC.MT.Public.Election.Classes.ElectionDistrictList">
             <summary>
-            A List of <see cref="T:CC.MT.Public.Election.ElectionDistrictZone"/>
+            A List of <see cref="T:CC.MT.Public.Election.Classes.ElectionDistrictZone"/>
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.ElectionDistrictZone">
+        <member name="T:CC.MT.Public.Election.Classes.ElectionDistrictZone">
             <summary>
             Containing ElectionDistrictZone Class
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.ElectionDistrictZone.#ctor">
+        <member name="M:CC.MT.Public.Election.Classes.ElectionDistrictZone.#ctor">
             <summary>
             Default Construtor
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.ElectionDistrictZone.#ctor(System.String)">
+        <member name="M:CC.MT.Public.Election.Classes.ElectionDistrictZone.#ctor(System.String)">
             <summary>
             Constructor that takes an error
             </summary>
             <param name="error">The error as to why we could not proceed</param>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Number">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.Number">
             <summary>
             The District and/or Zone number
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Code">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.Code">
             <summary>
             The District and/or Zone Code (used for ballot type)
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Name">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.Name">
             <summary>
             The District and/or Zone name
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.PrecinctNo">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.PrecinctNo">
             <summary>
             The full precinct number 'precinct-district' (ie. 69-13)
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Precinct">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.Precinct">
             <summary>
             The short precinct number 'precinct' (ie. 69) zero padded
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.PrecinctID">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.PrecinctID">
             <summary>
             The precinct ID
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.DistrictTypeName">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.DistrictTypeName">
             <summary>
             The type of the district
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Label">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.Label">
             <summary>
             Specifies District or Zone
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Error">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictZone.Error">
             <summary>
             If set then there was an error in processing the request for data
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.ElectionDistrictPrecinctsList">
+        <member name="T:CC.MT.Public.Election.Classes.ElectionDistrictPrecinctsList">
             <summary>
-            A List of <see cref="T:CC.MT.Public.Election.ElectionDistrictPrecincts"/>
+            A List of <see cref="T:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts"/>
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.ElectionDistrictPrecincts">
+        <member name="T:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts">
             <summary>
             Containing ElectionDistrictPrecincts Class
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.ElectionDistrictPrecincts.#ctor">
+        <member name="M:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts.#ctor">
             <summary>
             Default Construtor
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.ElectionDistrictPrecincts.#ctor(System.String)">
+        <member name="M:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts.#ctor(System.String)">
             <summary>
             Constructor that takes an error
             </summary>
             <param name="error">The error as to why we could not proceed</param>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictPrecincts.Name">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts.Name">
             <summary>
             The name of the district
             </summary>
-            <see cref="T:CC.MT.Public.Election.DistrictNames"/>
+            <see cref="T:CC.MT.Public.Election.Classes.DistrictNames"/>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictPrecincts.Precinct">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts.Precinct">
             <summary>
             The short precinct name separated by a comma
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.ElectionDistrictPrecincts.Error">
+        <member name="P:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts.Error">
             <summary>
             If set then there was an error in processing the request for data
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.PrecinctInfoList">
+        <member name="T:CC.MT.Public.Election.Classes.ElectionResultDetails">
             <summary>
-            A List of <see cref="T:CC.MT.Public.Election.PrecinctInfo"/>
+            Returns the collection of ElectionResultDetails
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.PartyList"/>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ElectionResultDetails.#ctor">
+            <summary>
+            Constructor used by documentation example
             </summary>
         </member>
-        <member name="T:CC.MT.Public.Election.PrecinctInfo">
+        <member name="M:CC.MT.Public.Election.Classes.ElectionResultDetails.#ctor(System.String)">
+            <summary>
+            Error handler constructor
+            </summary>
+            <param name="error">The error that occurred in processing the request</param>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.ElectionResultDetails.#ctor(CC.MT.Public.Election.Classes.PartyList,System.String)">
+            <summary>
+            Default Constructor
+            </summary>
+            <param name="party">The list of Parties</param>
+            <param name="error">An Error, if any</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionResultDetails.Results">
+            <summary>
+            A <see cref="T:CC.MT.Public.Election.Classes.PartyList">PartyList</see> of Results
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.PartyList"/>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.ElectionResultDetails.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.PartyList">
+            <summary>
+            A List of <see cref="T:CC.MT.Public.Election.Classes.Party">Party</see> objects
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.Party"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.Party">
+            <summary>
+            The Party object
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.Party.#ctor">
+            <summary>
+            Another Constructor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Classes.Party.ToString">
+            <summary>
+            Just a prettier string than default
+            </summary>
+            <returns>Party name + Contest Count</returns>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Party.PartyName">
+            <summary>
+            Can be any party name or empty if there is no party affiliation for the contests
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.Classes.Party.Contests">
+            <summary>
+            A List of contests for the party affiliation
+            </summary>
+            <see cref="T:CC.MT.Public.Election.Classes.ContestList"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.PrecinctInfoList">
+            <summary>
+            A List of <see cref="T:CC.MT.Public.Election.Classes.PrecinctInfo"/>
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.Classes.PrecinctInfo">
             <summary>
             Containing PrecinctInfo Class
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.PrecinctInfo.#ctor">
+        <member name="M:CC.MT.Public.Election.Classes.PrecinctInfo.#ctor">
             <summary>
             Default Construtor
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.PrecinctInfo.#ctor(System.String)">
+        <member name="M:CC.MT.Public.Election.Classes.PrecinctInfo.#ctor(System.String)">
             <summary>
             Constructor that takes an error
             </summary>
             <param name="error">The error as to why we could not proceed</param>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.DisplayAddress">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.DisplayAddress">
             <summary>
             The PollingPlaceName and Address
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.Address">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.Address">
             <summary>
             The full address
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.PollingPlaceName">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.PollingPlaceName">
             <summary>
             The name of the polling place
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.LocationName">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.LocationName">
             <summary>
             The street number and name
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.LocationDesc">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.LocationDesc">
             <summary>
             Any additional information - (ie. clubhouse, north ballroom). Can be empty
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.CityStateZip">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.CityStateZip">
             <summary>
             The City, State and Zip
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.PrecinctNo">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.PrecinctNo">
             <summary>
             The full precinct number 'precinct-district' (ie. 69-13)
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.Latitude">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.Latitude">
             <summary>
             The Latitude of the precinct location
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.Longitude">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.Longitude">
             <summary>
             The Longitude of the precinct location
             </summary>
         </member>
-        <member name="P:CC.MT.Public.Election.PrecinctInfo.Error">
+        <member name="P:CC.MT.Public.Election.Classes.PrecinctInfo.Error">
             <summary>
             If set then there was an error in processing the request for data
             </summary>
@@ -1190,7 +1378,7 @@
             Get the Precinct Info List
             </summary>
             <returns>A List of Precinct Information</returns>
-            <see cref="T:CC.MT.Public.Election.PrecinctInfo"/>
+            <see cref="T:CC.MT.Public.Election.Classes.PrecinctInfo"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.DistrictNamesController">
             <summary>
@@ -1202,7 +1390,7 @@
             Get the District Names List
             </summary>
             <returns>A List of District Information</returns>
-            <see cref="T:CC.MT.Public.Election.DistrictNames"/>
+            <see cref="T:CC.MT.Public.Election.Classes.DistrictNames"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.ElectionDistrictPrecinctsController">
             <summary>
@@ -1214,7 +1402,7 @@
             Get the Election District Precincts List
             </summary>
             <returns>A List of District and/or Zone for the current election as well as the precincts involved.</returns>
-            <see cref="T:CC.MT.Public.Election.ElectionDistrictPrecincts"/>
+            <see cref="T:CC.MT.Public.Election.Classes.ElectionDistrictPrecincts"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.ElectionDistrictZonesController">
             <summary>
@@ -1226,7 +1414,19 @@
             Get the ElectionDistrictZone List
             </summary>
             <returns>A List of Election District and Zone</returns>
-            /// <see cref="T:CC.MT.Public.Election.ElectionDistrictZone"/>
+            <see cref="T:CC.MT.Public.Election.Classes.ElectionDistrictZone"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.ElectionResultDetailsController">
+            <summary>
+            Returns the ElectionResultDetails
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.ElectionResultDetailsController.GetResultDetail">
+            <summary>
+            Returns the ElectionResultDetails
+            </summary>
+            <returns>A List of Election ResultDetails</returns>
+            <see cref="T:CC.MT.Public.Election.Classes.ElectionResultDetails"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.HomeController">
             <summary>

@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
-using CC.Common.Data;
-using System.Globalization;
 
-namespace CC.MT.Public.Election
+namespace CC.MT.Public.Election.Classes
 {
   /// <summary>
   /// A List of <see cref="PrecinctInfo"/>

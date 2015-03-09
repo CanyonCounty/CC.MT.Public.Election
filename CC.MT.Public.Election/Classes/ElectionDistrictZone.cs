@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Runtime.Serialization;
 
-namespace CC.MT.Public.Election
+namespace CC.MT.Public.Election.Classes
 {
   /// <summary>
   /// A List of <see cref="ElectionDistrictZone"/>

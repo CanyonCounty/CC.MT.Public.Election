@@ -23,7 +23,8 @@ namespace CC.MT.Public.Election.Controllers
       //path = "/AllPrecinctInfo";
       //path = "/DistrictNames";
       //path = "/ElectionDistrictPrecincts";
-      path = "/ElectionDistrictZones";
+      //path = "/ElectionDistrictZones";
+      path = "/ElectionResultDetails";
 
       Response.Redirect(Request.AppRelativeCurrentExecutionFilePath + path);
       return null;
