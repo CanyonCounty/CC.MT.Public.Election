@@ -24,9 +24,20 @@
     <section class="featured">
         <div class="content-wrapper">
             <h2>Introduction</h2>
-            <p>
-                The following methods are provided. You can call any of them by their name. (example: <a href="http://api.canyonco.org/Election/ElectionDistrictPrecincts">http://api.canyonco.org/Election/ElectionDistrictPrecincts</a>)
-            </p>
+          <p>
+            The following methods are provided. You can call any of them by their name. (example: <a href="http://api.canyonco.org/Election/ElectionDistrictPrecincts">http://api.canyonco.org/Election/ElectionDistrictPrecincts</a>)
+          </p>
+          <p>
+            Methods that start with Election (ElectionDistrictZone, ElectionDistrictPrecincts, etc.) are current election related.
+            The current election is calculated based on the current server time.
+            If there is an election within 30 days, then that is the current election.
+            If not, then the previous election will be the current election.
+            The election office has 30 days before an election to have it set-up (ballots, etc).
+            This is why there is a 30 day limit, it may not be set-up any sooner.
+          </p>
+          <p>
+            All other methods are independent of an election.
+          </p>
         </div>
     </section>
     <section class="content-wrapper main-content clear-fix">

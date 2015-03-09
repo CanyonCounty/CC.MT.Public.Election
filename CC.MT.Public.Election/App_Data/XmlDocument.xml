@@ -1006,6 +1006,72 @@
             If set then there was an error in processing the request for data
             </summary>
         </member>
+        <member name="T:CC.MT.Public.Election.ElectionDistrictList">
+            <summary>
+            A List of <see cref="T:CC.MT.Public.Election.ElectionDistrictZone"/>
+            </summary>
+        </member>
+        <member name="T:CC.MT.Public.Election.ElectionDistrictZone">
+            <summary>
+            Containing ElectionDistrictZone Class
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.ElectionDistrictZone.#ctor">
+            <summary>
+            Default Construtor
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.ElectionDistrictZone.#ctor(System.String)">
+            <summary>
+            Constructor that takes an error
+            </summary>
+            <param name="error">The error as to why we could not proceed</param>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Number">
+            <summary>
+            The District and/or Zone number
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Code">
+            <summary>
+            The District and/or Zone Code (used for ballot type)
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Name">
+            <summary>
+            The District and/or Zone name
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.PrecinctNo">
+            <summary>
+            The full precinct number 'precinct-district' (ie. 69-13)
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Precinct">
+            <summary>
+            The short precinct number 'precinct' (ie. 69) zero padded
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.PrecinctID">
+            <summary>
+            The precinct ID
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.DistrictTypeName">
+            <summary>
+            The type of the district
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Label">
+            <summary>
+            Specifies District or Zone
+            </summary>
+        </member>
+        <member name="P:CC.MT.Public.Election.ElectionDistrictZone.Error">
+            <summary>
+            If set then there was an error in processing the request for data
+            </summary>
+        </member>
         <member name="T:CC.MT.Public.Election.ElectionDistrictPrecinctsList">
             <summary>
             A List of <see cref="T:CC.MT.Public.Election.ElectionDistrictPrecincts"/>
@@ -1149,6 +1215,18 @@
             </summary>
             <returns>A List of District and/or Zone for the current election as well as the precincts involved.</returns>
             <see cref="T:CC.MT.Public.Election.ElectionDistrictPrecincts"/>
+        </member>
+        <member name="T:CC.MT.Public.Election.Controllers.ElectionDistrictZonesController">
+            <summary>
+            Returns a list of districts and/or zones for every precinct in the current election
+            </summary>
+        </member>
+        <member name="M:CC.MT.Public.Election.Controllers.ElectionDistrictZonesController.GetResultDetail">
+            <summary>
+            Get the ElectionDistrictZone List
+            </summary>
+            <returns>A List of Election District and Zone</returns>
+            /// <see cref="T:CC.MT.Public.Election.ElectionDistrictZone"/>
         </member>
         <member name="T:CC.MT.Public.Election.Controllers.HomeController">
             <summary>

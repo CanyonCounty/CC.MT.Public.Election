@@ -131,6 +131,26 @@ namespace CC.MT.Public.Election.Areas.HelpPage
 
       ElectionDistrictPrecinctsList elpList = new ElectionDistrictPrecinctsList() {elpCald, elpValli};
 
+      ElectionDistrictZone edCald = new ElectionDistrictZone();
+      edCald.Number = "132";
+      edCald.Code = "SCHCA";
+      edCald.Name = "Caldwell School District";
+      edCald.PrecinctNo = "07-10";
+      edCald.Precinct = "07";
+      edCald.DistrictTypeName = "School";
+      edCald.Label = "District";
+
+      ElectionDistrictZone edMid = new ElectionDistrictZone();
+      edMid.Number = "134-2";
+      edMid.Code = "SCHMDZ2";
+      edMid.Name = "Middleton School District Zone 2";
+      edMid.PrecinctNo = "40-11";
+      edMid.Precinct = "40";
+      edMid.DistrictTypeName = "School";
+      edMid.Label = "Zone";
+
+      ElectionDistrictList eldList = new ElectionDistrictList() {edCald, edMid};
+
       config.Services.Replace(typeof(IApiExplorer), new MyApiExplorer(config));
 
       //// Uncomment the following to use the documentation from XML documentation file.
@@ -145,6 +165,7 @@ namespace CC.MT.Public.Election.Areas.HelpPage
           {typeof(IQueryable<PrecinctInfo>), precinctList.AsQueryable()},
           {typeof(IQueryable<DistrictNames>), districtList.AsQueryable()},
           {typeof(IQueryable<ElectionDistrictPrecincts>), elpList.AsQueryable()},
+          {typeof(IQueryable<ElectionDistrictZone>), eldList.AsQueryable()},
           //{typeof(IQueryable<string>), new string[]{"A", "B", "...", "W", "Y", "Z"}.AsQueryable()},
           //{typeof(Dictionary<string, string>), dict}
       });
