@@ -11,24 +11,6 @@ namespace CC.MT.Public.Election.Classes
   /// <see cref="Party"/>
   public class PartyList : List<Party>
   {
-    //public Party FindParty(string party)
-    //{
-    //  return this.FirstOrDefault(c => c.PartyName == party);
-    //}
-
-    //public Contest FindContest(string party, string contest)
-    //{
-    //  Contest ret = null;
-    //  foreach (Party p in this.Where(p => p.PartyName == party))
-    //  {
-    //    foreach (Contest c in p.Contests.Where(c => c.Name == contest))
-    //    {
-    //      ret = c;
-    //      break;
-    //    }
-    //  }
-    //  return ret;
-    //}
   }
 
   /// <summary>
@@ -45,13 +27,6 @@ namespace CC.MT.Public.Election.Classes
       Contests = new ContestList();
     }
 
-    //public Party(DataRow row)
-    //{
-    //  _contests = new ContestList();
-    //  _name = row["Party"].ToString();
-    //  _contests.Add(new Contest(row));
-    //}
-
     /// <summary>
     /// Can be any party name or empty if there is no party affiliation for the contests
     /// </summary>
@@ -63,9 +38,5 @@ namespace CC.MT.Public.Election.Classes
     /// <see cref="ContestList"/>
     public ContestList Contests { get; set; }
 
-    //public void AddContest(DataRow row)
-    //{
-    //  Contests.Add(new Contest(row));
-    //}
   }
 }

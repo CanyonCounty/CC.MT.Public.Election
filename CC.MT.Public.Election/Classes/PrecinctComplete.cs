@@ -30,13 +30,6 @@ namespace CC.MT.Public.Election.Classes
       Error = error;
     }
 
-    //public PrecinctComplete(string precinct, bool completed)
-    //{
-    //  Precinct = precinct;
-    //  Completed = completed;
-    //  Error = String.Empty;
-    //}
-
     /// <summary>
     /// The precinct number in simple form (without the district)
     /// </summary>

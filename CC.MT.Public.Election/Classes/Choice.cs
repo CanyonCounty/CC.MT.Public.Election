@@ -14,24 +14,6 @@ namespace CC.MT.Public.Election.Classes
   /// </summary>
   public class Choice
   {
-    // You need a default / empty constrictor - ERRGH!
-    //public Choice()
-    //{
-    //  _name = String.Empty;
-    //  _votecount = String.Empty;
-    //  _percentage = String.Empty;
-    //}
-
-    //public Choice(DataRow row)
-    //{
-    //  _name = CCData.ToString(row["Choice"]);
-    //  _votecount = CCData.ToString(row["VoteCount"]);
-    //  _percentage = CCData.ToString(row["Percentage"]);
-
-    //  //if (_votecount == String.Empty) _votecount = "0";
-    //  //if (_percentage == String.Empty) _percentage = "0.00";
-    //}
-
     /// <summary>
     /// The Choice Name as it is on the ballot
     /// </summary>

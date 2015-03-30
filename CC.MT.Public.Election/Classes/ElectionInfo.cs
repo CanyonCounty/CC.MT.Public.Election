@@ -8,12 +8,6 @@ namespace CC.MT.Public.Election.Classes
   /// </summary>
   public class ElectionInfo
   {
-    //private string _electionDate;
-    //private DateTime _realElectionDate;
-    //private string _electionName;
-    //private string _electionTypeName;
-    //private string _error;
-
     /// <summary>
     /// Default Constructor
     /// </summary>
@@ -31,16 +25,6 @@ namespace CC.MT.Public.Election.Classes
       ElectionTypeName = String.Empty;
       Error = error;
     }
-
-    //public ElectionInfo(DataRow row)
-    //{
-    //  ElectionID = CCData.ToString(row["ElectionID"]);
-    //  _electionDate = CCData.ToString(row["ElectionDate"]);
-    //  _electionName = CCData.ToString(row["ElectionName"]);
-    //  _electionTypeName = CCData.ToString(row["ElectionTypeName"]);
-    //  _realElectionDate = CCData.ToDateTime(row["ElectionDate"]);
-    //  _error = String.Empty;
-    //}
 
     /// <summary>
     /// Election ID, now visible
@@ -72,24 +56,5 @@ namespace CC.MT.Public.Election.Classes
     /// If set then there was an error in processing the request for data
     /// </summary>
     public String Error { get; set; }
-
-    //private String UserFriendlyCount(DateTime date)
-    //{
-    //  string ret = "";
-    //  DateTime now = DateTime.Now.Date;
-    //  //now = DateTime.Parse("3/9/2015");
-    //  TimeSpan ts = date.Date - now;
-
-    //  switch (Math.Abs(ts.Days))
-    //  {
-    //    case 0: ret = "Today"; break;
-    //    case 1: ret = "Tomorrow"; break;
-    //    default:
-    //      ret = Math.Abs(ts.TotalDays).ToString();
-    //      break;
-    //  }
-
-    //  return ret;
-    //}
   }
 }

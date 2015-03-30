@@ -31,20 +31,6 @@ namespace CC.MT.Public.Election.Classes
       Error = error;
     }
 
-    //public ResultSummary(DataRow row)
-    //{
-    //  ResultSummaryID = CCData.ToInteger(row["ResultSummaryID"]);
-    //  ElectionID = CCData.ToInteger(row["ElectionID"]);
-    //  LastUpdated = row["LastUpdated"].ToString();
-    //  TotalVoters = row["TotalVoters"].ToString();
-    //  BallotsCounted = row["BallotsCounted"].ToString();
-    //  VoterTurnout = row["VoterTurnout"].ToString();
-    //  PrecinctsComplete = row["PrecinctsComplete"].ToString();
-    //  _electionDate = row["ElectionDate"].ToString();
-    //  ElectionName = row["ElectionName"].ToString();
-    //  _error = String.Empty;
-    //}
-
     /// <summary>
     /// You Can't see me
     /// </summary>

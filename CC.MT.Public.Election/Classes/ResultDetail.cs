@@ -35,28 +35,8 @@ namespace CC.MT.Public.Election.Classes
       Choice = String.Empty;
       Votecount = String.Empty;
       Percentage = String.Empty;
-      //_precinct = String.Empty;
       Error = error;
     }
-
-    //public ResultDetail(DataRow row)
-    //{
-    //  //_resultDetailId = row["ResultDetailID"].ToString();
-    //  _electionId = row["ElectionID"].ToString();
-    //  _party = row["Party"].ToString();
-    //  _contest = row["Contest"].ToString();
-    //  _choice = row["Choice"].ToString();
-    //  _votecount = row["VoteCount"].ToString();
-    //  _percentage = row["Percentage"].ToString();
-    //  //_precinct = row["Precinct"].ToString();
-    //  _error = String.Empty;
-    //}
-
-    //public String ResultDetailID
-    //{
-    //  get { return _resultDetailId; }
-    //  set { }
-    //}
 
     /// <summary>
     /// You Can't see me
