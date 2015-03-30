@@ -1080,12 +1080,6 @@
             A Single Choice
             </summary>
         </member>
-        <member name="M:CC.MT.Public.Election.Classes.Choice.ToString">
-            <summary>
-            Just a prettier string than default
-            </summary>
-            <returns>Choice Name + " - " + VoteCount + " - " + Percentage</returns>
-        </member>
         <member name="P:CC.MT.Public.Election.Classes.Choice.Name">
             <summary>
             The Choice Name as it is on the ballot
@@ -1117,12 +1111,6 @@
             <summary>
             Another Constructor
             </summary>
-        </member>
-        <member name="M:CC.MT.Public.Election.Classes.Contest.ToString">
-            <summary>
-            Just a prettier string than default
-            </summary>
-            <returns>Contest Name + Choices Count</returns>
         </member>
         <member name="P:CC.MT.Public.Election.Classes.Contest.Name">
             <summary>
@@ -1381,12 +1369,6 @@
             <summary>
             Another Constructor
             </summary>
-        </member>
-        <member name="M:CC.MT.Public.Election.Classes.Party.ToString">
-            <summary>
-            Just a prettier string than default
-            </summary>
-            <returns>Party name + Contest Count</returns>
         </member>
         <member name="P:CC.MT.Public.Election.Classes.Party.PartyName">
             <summary>
