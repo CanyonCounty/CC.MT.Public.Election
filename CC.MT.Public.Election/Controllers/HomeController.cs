@@ -24,11 +24,11 @@ namespace CC.MT.Public.Election.Controllers
       //path = "/DistrictNames";
       //path = "/ElectionDistrictPrecincts";
       //path = "/ElectionDistrictZones";
-      path = "/ElectionResultDetails";
+      //path = "/ElectionResultDetails";
       //path = "/NextElection";
       //path = "/PrecinctComplete";
       //path = "/ElectionResultSummary";
-      //path = "/ElectionResultDetailsFlat";
+      path = "/ElectionResultDetailsFlat";
 
       Response.Redirect(Request.AppRelativeCurrentExecutionFilePath + path);
       return null;

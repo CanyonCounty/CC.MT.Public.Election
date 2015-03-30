@@ -54,14 +54,5 @@ namespace CC.MT.Public.Election.Classes
     //{
     //  Choices.Add(new Choice(row));
     //}
-
-    /// <summary>
-    /// Just a prettier string than default
-    /// </summary>
-    /// <returns>Contest Name + Choices Count</returns>
-    //public override String ToString()
-    //{
-    //  return Name + " - " + Choices.Count.ToString();
-    //}
   }
 }

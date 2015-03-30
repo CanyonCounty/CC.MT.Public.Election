@@ -46,14 +46,5 @@ namespace CC.MT.Public.Election.Classes
     /// The calculated percentage of vote counts between choices. It will be blank before ballots are counted
     /// </summary>
     public String Percentage { get; set; }
-
-    /// <summary>
-    /// Just a prettier string than default
-    /// </summary>
-    /// <returns>Choice Name + " - " + VoteCount + " - " + Percentage</returns>
-    //public override String ToString()
-    //{
-    //  return Name + " - " + VoteCount + " - " + Percentage;
-    //}
   }
 }

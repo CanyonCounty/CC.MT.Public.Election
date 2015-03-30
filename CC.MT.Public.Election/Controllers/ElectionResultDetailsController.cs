@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Net;
-using System.Text;
 using System.Web.Http;
+using CC.MT.Proxy;
 using CC.MT.Public.Election.Classes;
 using Newtonsoft.Json;
 
@@ -22,9 +21,11 @@ namespace CC.MT.Public.Election.Controllers
       ElectionResultDetails list;
       try
       {
-        WebClient client = new WebClient();
-        byte[] raw = client.DownloadData("http://ccmtprod08.canyonco.org/Election/ElectionResultDetails");
-        string json = Encoding.UTF8.GetString(raw);
+        //WebClient client = new WebClient();
+        //byte[] raw = client.DownloadData("http://ccmtprod08.canyonco.org/Election/ElectionResultDetails");
+        //string json = Encoding.UTF8.GetString(raw);
+        CCProxy proxy = new CCProxy();
+        string json = proxy.GetJSONFromPath("/Election/ElectionResultDetails");
         list = JsonConvert.DeserializeObject<ElectionResultDetails>(json);
       }
       catch (Exception e)

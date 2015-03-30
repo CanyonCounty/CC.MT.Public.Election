@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Text;
 using System.Web.Http;
+using CC.MT.Proxy;
 using CC.MT.Public.Election.Classes;
 using Newtonsoft.Json;
 
@@ -24,9 +23,11 @@ namespace CC.MT.Public.Election.Controllers
       List<ElectionDistrictZone> list = new ElectionDistrictList();
       try
       {
-        WebClient client = new WebClient();
-        byte[] raw = client.DownloadData("http://ccmtprod08.canyonco.org/Election/ElectionDistrictZones");
-        string json = Encoding.UTF8.GetString(raw);
+        //WebClient client = new WebClient();
+        //byte[] raw = client.DownloadData("http://ccmtprod08.canyonco.org/Election/ElectionDistrictZones");
+        //string json = Encoding.UTF8.GetString(raw);
+        CCProxy proxy = new CCProxy();
+        string json = proxy.GetJSONFromPath("/Election/ElectionDistrictZones");
         list = JsonConvert.DeserializeObject<List<ElectionDistrictZone>>(json);
       }
       catch (Exception e)

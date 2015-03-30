@@ -67,14 +67,5 @@ namespace CC.MT.Public.Election.Classes
     //{
     //  Contests.Add(new Contest(row));
     //}
-
-    /// <summary>
-    /// Just a prettier string than default
-    /// </summary>
-    /// <returns>Party name + Contest Count</returns>
-    //public override String ToString()
-    //{
-    //  return PartyName + " - " + Contests.Count.ToString();
-    //}
   }
 }
